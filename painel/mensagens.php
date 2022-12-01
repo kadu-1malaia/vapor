@@ -39,7 +39,7 @@ $mensagens = mysqli_query($conn, $query_mensagens);
                     <td><?= $mensagem['nome_usuario'] ?></td>
                     <td class="center"><?= lcfirst( $mensagem['assunto_da_menasgem'])?></td>
                     <td class="center"><a href="visualizar-mensagem.php?id=<?=$mensagem['id'] ?>">Visualizar</a></td>
-                    <td class="center"><a href="arquivar-mensagem.php?id=<?=$mensagem['id'] ?>">Arquivar</a></td>
+                    <td class="center"><a onclick="arquivarMensagem(<?=$mensagem['id'] ?>)" href="#" >Excluir</a></td>
                 </tr>
 
             <?php } ?>
